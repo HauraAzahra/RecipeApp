@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <string name="hello">Hello, Haura</string>
+    <string name="make_your_own_food">Make your own food,</string>
+    <string name="stay_at">stay at</string>
+    <string name="home">home</string>
+    <string name="search_any_recipe">Search any recipe</string>
+    <string name="popular">Popular</string>
+    <string name="western">Western</string>
+    <string name="dessert">Dessert</string>
+    <string name="drinks">Drinks</string>
+    <string name="popular_recipes">Popular Recipes</string>
+</resources>
