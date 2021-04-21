@@ -40,26 +40,49 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         val email = signinBinding.etEmailSignIn.text.toString()
         val password = signinBinding.etPssSignIn.text.toString()
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this,
+            Toast.makeText(
+                this,
                 "Tidak  boleh Kosong",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         FirebaseAuth.getInstance()
             .signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
-                if (it.isSuccessful){
-                    Toast.makeText(this, "Login Success",
-                        Toast.LENGTH_SHORT).show()
+                if (it.isSuccessful) {
+                    Toast.makeText(
+                        this, "Login Success",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     startActivity(MainActivity.getLaunchService(this))
                     return@addOnCompleteListener
+                } else {
+                    Toast.makeText(
+                        this, "Login Gagal",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
-        }
+            }.addOnFailureListener {
+                Toast.makeText(this, "Login Gagal",
+                    Toast.LENGTH_SHORT).show()
+            }
 
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null){
+            startActivity(MainActivity.getLaunchService(this))
+        }
+    }
+
     override fun onClick(v: View) {
+        when(v.id){
+            R.id.btn_sign_in -> signIn()
+        }
     }
 }
