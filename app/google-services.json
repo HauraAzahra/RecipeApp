@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "831812890758",
+    "project_id": "idn-poltek",
+    "storage_bucket": "idn-poltek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831812890758:android:226deff2975a1b3151a107",
+        "android_client_info": {
+          "package_name": "com.idn.recipeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831812890758-agm1jr1k5cv5roelfhg11386ike4iag9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.idn.recipeapp",
+            "certificate_hash": "20cf5cb6a0dcb817a2bb82e744c834d992ed68c5"
+          }
+        },
+        {
+          "client_id": "831812890758-2pb40u1vum739oqqcdc9fs1n0fdq1f66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9km-baERCX9Cb3vNm-p8xdRlqTnjWGUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831812890758-2pb40u1vum739oqqcdc9fs1n0fdq1f66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
