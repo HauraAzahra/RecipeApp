@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         mainBinding.btnLogout.setOnClickListener(this)
+        supportActionBar?.hide()
 
     }
 

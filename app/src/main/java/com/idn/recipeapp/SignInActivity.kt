@@ -83,6 +83,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.btn_sign_in -> signIn()
+            R.id.tv_sign_up -> startActivity(Intent(SignupActivity.getLaunchService(this )))
         }
     }
 }
