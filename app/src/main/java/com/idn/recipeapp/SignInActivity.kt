@@ -42,7 +42,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(
                 this,
-                "Tidak  boleh Kosong",
+                getString(R.string.not_Empty),
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -68,10 +68,8 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "Login Gagal",
                     Toast.LENGTH_SHORT).show()
             }
-
-
+        
     }
-
     override fun onStart() {
         super.onStart()
         val user = FirebaseAuth.getInstance().currentUser
@@ -84,6 +82,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
         when(v.id){
             R.id.btn_sign_in -> signIn()
             R.id.tv_sign_up -> startActivity(Intent(SignupActivity.getLaunchService(this )))
+            R.id.tv_forgot -> startActivity(Intent(ForgotActivity.getLaunchService(this)))
         }
     }
 }
