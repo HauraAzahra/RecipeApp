@@ -5,8 +5,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.firebase.auth.FirebaseAuth
+import com.idn.recipeapp.adapter.MealsAdapter
 import com.idn.recipeapp.databinding.ActivityMainBinding
+import com.idn.recipeapp.model.ResponseDetailMeals
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mainBinding: ActivityMainBinding
@@ -30,6 +34,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mainBinding.btnLogout.setOnClickListener(this)
         supportActionBar?.hide()
 
+        getRecipeAsean()
+
+    }
+
+    private fun getRecipeAsean() {
+        //konek ke retrofit konfig .. membuat request
+        //sukses sama gagal
+
+        //sukses
+        //data di get terus ditempel ke rv
+        val listMeals = ResponseDetailMeals().meals
+            //... response.
+        val recipeAdapter = MealsAdapter(this@MainActivity, listMeals)
+        rv_popular_recipes.adapter =recipeAdapter
+        rv_popular_recipes.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
+        //gagal kasih toast
     }
 
     fun signOut() {

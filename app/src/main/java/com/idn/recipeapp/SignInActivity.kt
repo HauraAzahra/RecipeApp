@@ -68,7 +68,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "Login Gagal",
                     Toast.LENGTH_SHORT).show()
             }
-        
+
     }
     override fun onStart() {
         super.onStart()
